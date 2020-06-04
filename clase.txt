@@ -1,0 +1,230 @@
+CTRL K C = Comentario
+FONTS GOOGLE LETRASSSS
+LLamar de HTML a CSS
+link rel="stylesheet" href="estilos.css"
+
+Para que no se distorcione a la hora de cambiar el tamaño de la pantalla descargar
+NORMALIZE.CSS
+
+INCLUIR JS
+script src="script.js"
+
+Para que salga un mensaje antes del click(Mensajes en comillas"" datos sin ""<head>
+Representa una colección de metadatos acerca del documento, incluyendo enlaces a, o definiciones de, scripts y hojas de estilo.)
+Alert(Mensaje+" "+Mensaje) SOLO EN JS
+
+-<head>
+Representa una colección de metadatos acerca del documento, 
+incluyendo enlaces a, o definiciones de, scripts y hojas de estilo.
+-<base>
+Define la URL base para las URLs relativas en la página.
+
+-Uno al lado del otro
+display:flex;
+
+-ul
+   li
+Listas ordenadas
+
+-list-style: none;
+Para que no tenga el punto
+
+-display:flex;
+justify-content: space-between;
+Separador en extremos pero juntos(Tienen que estar ambos para que cambie)
+
+-text-decoration: none;
+Para que no tenga ninguna decoracion
+ 
+-nav li a:hover{
+    color: white;
+Para que cuando estemos encima del texto cambie de color (Detallemos exacto el punto donde afectara)
+
+-align-items: center;
+Para que este en el centro
+
+-font-weight:bold 
+NEGRITA
+
+-background-image: url("../Imagenes/curve.png");
+Para traer imagenes en CSS
+../ retroceder una carpeta
+
+-background-size: cover ;
+PARA QUE OCUPE EL LUGAR QUE TIENE EN LA WEB
+
+-background-position: center top;
+La parte llamada siempre estara en el centro
+
+
+-PADDING en % se centra
+
+-<img src="Imagenes/lomo.jpg" alt="">
+Para imagenes
+
+
+-<button href="#" class="main_button">Leer</abutton>
+Para botones
+
+-cursor: pointer;
+Para que salga la mano
+
+-border-radius: 4px;
+Para que sea curvo las esquinas
+
+<section> Lo usamos para dividir secciones
+<footer> Define el footer ya sea de toda la página o solo de un componente.
+<iframe> Nos ayuda a incrustar otra página en nuestro html
+<video> Nos ayuda a incrustar video dentro de nuestra web
+
+
+Version mobile
+mobile.css
+-POR DEBAJO DE LOS 600 pixeles que active toda la regla
+@media (max-width: 600px)
+{
+	.productos
+    {
+        display: inherit; Para que respete lo que la clase padre esta haciendo
+        height: auto;
+    
+    }
+    .producto
+    {
+        margin-top: auto;
+    }
+    .main_section
+    {
+        padding: 4%;
+    }
+    .Destacado, .Personas
+    {
+        display: inherit;
+    }
+    
+}
+
+Animacion
+.fadeIn
+{ 
+    -webkit-animation-duration:4s ;	Para que cumpla si o si
+    animation-duration: 4s;		 Duracion
+     -webkit-animation-fill-mode: both;	
+    animation-fill-mode: both; 		Tiene q hacer
+    animation-name: fadeIn; 		Nombre
+    -webkit-animation-name: fadeIn;
+}
+@keyframes fadeIn
+{
+    from		De opacidad 0
+    {
+        opacity: 0;
+    }
+    to			a opacidad 1
+    {
+        opacity: 1;
+    }
+}
+
+Y poner en HTML
+<div class="main_section fadeIn" >
+
+
+@keyframes fadeInDown		De arriba hacia abajo
+{
+    from
+    {
+        opacity: 0;
+        -webkit-transform: translate3d(0,-100%,0); 	Transform(anima en CSS) translat3d (hace que de posicionamiento)
+        transform: translate3d(0,-100%,0);
+    }
+    to
+    {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);		Que vuelva a su posicion original
+        transform: translate3d(0,0,0);
+    }
+
+EN HTML 
+<nav class="fadeInDown"> 
+
+
+>>>Atributos especiales de las etiquetas para mejorar el funcionamiento de nuestros formularios<<<
+
+Los formularios de nuestras páginas web se componen principalmente de labels para indicarle a 
+los usuarios qué datos van a llenar, los inputs son los espacios donde pueden llenar estos datos y
+ los botones son para enviar el formulario (o cualquier otra cosa, por ejemplo hacer reset).
+
+<label for=”nombre”>Nombre:</label>
+<input type=”text” id=”nombre” />
+
+<label for=”edad”>Edad:</label>
+<input type=”number” id=”edad” />
+
+-Action: Este atributo de la etiqueta <form> nos permite establecer el lugar o URL donde 
+los datos de los usuarios deben ser enviados una vez ellos terminen de llenar el formulario.
+
+-Name: Este atributo de las etiquetas <input> nos permite que los datos que los usuarios
+ hayan escrito se envíen correctamente cuando han terminado de llenar el formulario. 
+El valor de esta etiqueta debe indicar el nombre con el cual queremos almacenar o interactuar
+ con esta información en el futuro.
+
+-Type: El atributo type=”submit” le permite a los usuarios indicar que han terminado de llenar 
+el formulario y lo pueden enviar para almacenar la información. También podemos usar este
+ atributo en inputs para que estos pasen a tener el rol de botón de envío del formulario.
+
+<form action=”URL_DONDE_QUIERO_ENVIAR_LO_DATOS”>
+  <label for=”nombre”>Nombre:</label>
+  <input type=”text” id=”nombre” name=”user_name” />
+
+  <label for=“edad“>Edad:</label>
+  <input type=”number” id=”edad” name=”user_age” />
+
+  <button type=”submit”>Enviar mis datos</button>
+</form>
+
+Librería vs Framework
+
+FRAMEWORK
+
+Es un molde donde inicia
+
+Libreria 
+
+Son funciones que ya tienen un objetivo
+
+
+Una librería es un conjunto de elementos (funciones, clases, tipos predefinidos, 
+constantes, variables globales, macros, etc) 
+que es posible utilizar en un programa para facilitar 
+la implementación de ese programa.
+
+Un framework es un conjunto integrado de herramientas que 
+facilitan un desarrollo software. Puede incluir APIs y librerías. 
+Pero también puede incluir otros elementos como herramientas de depuración,
+ diseño gráfico, prototipado, edición, etc.
+
+>>?2>>Sistema de Grillas 
+
+Los sistemas de grillas nos ayudan a configurar el espacio y tamaño de nuestros elementos. 
+En este caso, vamos a separar nuestra grilla en 12 posibles tamaños,
+ así que debemos realizar la operación 100/12 y multiplicar el resultado por cada posible 
+tamaño de nuestra grilla.
+
+-footer
+Pie de pagina
+
+
+Nos permite que cuando minimicemos la pagina esta tambien se ponga en fila para que no se pierda los datos
+@media (max-width:900px)
+{
+    .row
+    {
+        display: inherit;
+    }
+    .col-1,.-col-2,.-col-3,.-col-4,.-col-5,.-col-6,.-col-7,.-col-8,.-col-9,.-col-10,.-col-11,.-col-12
+    {
+        width: 100%;
+    }
+
+}
